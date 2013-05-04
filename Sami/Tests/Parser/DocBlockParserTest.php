@@ -87,14 +87,14 @@ class DocBlockParserTest extends \PHPUnit_Framework_TestCase
                  * @see http://symfony.com/
                  */
                 ',
-                array('tags' => array('see' => 'http://symfony.com/')),
+                array('shortdesc' => '', 'longdesc' => '', 'tags' => array('see' => 'http://symfony.com/')),
             ),
             array('
                 /**
                  * @author fabien@example.com
                  */
                 ',
-                array('tags' => array('author' => 'fabien@example.com')),
+                array('shortdesc' => '', 'longdesc' => '', 'tags' => array('author' => 'fabien@example.com')),
             ),
             array('
                 /**
@@ -102,7 +102,7 @@ class DocBlockParserTest extends \PHPUnit_Framework_TestCase
                  * @author Thomas <thomas@example.com>
                  */
                 ',
-                array('tags' => array('author' => array('Fabien <fabien@example.com>', 'Thomas <thomas@example.com>'))),
+                array('shortdesc' => '', 'longdesc' => '', 'tags' => array('author' => array('Fabien <fabien@example.com>', 'Thomas <thomas@example.com>'))),
             ),
         );
     }

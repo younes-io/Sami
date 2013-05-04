@@ -123,7 +123,7 @@ class DocBlockParser
             $description = isset($sentences[1]) ? $sentences[1] : '';
         }
 
-        $doc->setShortDesc(ltrim($title));
+        $doc->setShortDesc(ltrim(preg_replace("#\s*\n\s*#", ' ', $title)));
         $doc->setLongDesc(ltrim($description));
 
         foreach ($tags as $name => $values) {
